@@ -7,6 +7,7 @@ use App\Post;
 
 class BlogController extends Controller
 {
+    protected $limit = 10;
     public function index()
     {
     //  \DB::enableQueryLog(); -> Untuk debugging
@@ -15,7 +16,8 @@ class BlogController extends Controller
     // Cara luar biasa (Menggunakan Scope) Ex nama scope adalah dataTerakhir
     // Maka buatlah method di Model terkait dengan nama scope+NamaScope => scopeDataTerakhir
     // $posts = Post::dataTerakhir()->get();
-      $posts = Post::dataTerakhir()->paginate(3);
+    // Pagination
+      $posts = Post::dataTerakhir()->paginate($this->limit);
     //  view('posts.index', compact('posts'))->render();
     return view('posts.index', compact('posts'));
     //  dd(\DB::getQueryLog());
