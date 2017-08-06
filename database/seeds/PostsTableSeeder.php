@@ -17,6 +17,7 @@ class PostsTableSeeder extends Seeder
 
         // Create Object Faker
         $faker = Factory::create();
+        
         // Siapkan Variabel dalam bentuk Array untuk menyimpan data Dummy
         $posts = [];
 

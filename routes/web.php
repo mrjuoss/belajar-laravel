@@ -16,3 +16,11 @@ Route::get('/', function () {
 });
 
 Route::get('/post', 'BlogController@index');
+
+Route::get('/admin', function(){
+  return view('templates.default');
+});
+
+Route::get('/stats', function(){
+  return view('templates.pages.statistic');
+});

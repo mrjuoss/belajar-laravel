@@ -7,7 +7,7 @@ use App\Post;
 
 class BlogController extends Controller
 {
-    protected $limit = 10;
+    protected $limit = 5;
     public function index()
     {
     //  \DB::enableQueryLog(); -> Untuk debugging
