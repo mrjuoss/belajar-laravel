@@ -15,6 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/about', function(){
-  return "Ini adalah halaman about";
-});
+Route::get('/post', 'BlogController@index');
