@@ -24,3 +24,7 @@ Route::get('/admin', function(){
 Route::get('/stats', function(){
   return view('templates.pages.statistic');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
